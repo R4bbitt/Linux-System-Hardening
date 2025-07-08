@@ -217,7 +217,7 @@ I also changed the log rotate to daily, and then updated it so the system only k
 
 # Create and Schedule Hardening Scripts
 
-In this step, I'll create two scripts that can automate the entire process above, creating a file with documenting the processes that took place. The first one will edit users and groups and their file privieleges. I'll start by creating two empty script files.  
+In this step, I'll create two scripts that can automate the entire process above, creating a file with documenting the processes that took place. The first one will create a backup, edit users and groups and their file privieleges. I'll start by creating two empty script files.  
 
 - Touch hardening_script1.sh
 - Nano hardening_script1.sh
@@ -238,6 +238,8 @@ I was given an error message the first time as some of the bashes I put in the s
 <img width="967" height="132" alt="Image" src="https://github.com/user-attachments/assets/403a9b27-d785-4fe4-bed8-6ea12be9b5a9" />
 
 <img width="920" height="192" alt="Image" src="https://github.com/user-attachments/assets/5ac0ca72-6f19-42d5-b383-ac7e4ef0ee47" />
+
+After running the first script, this is the file that is created:
 
 
 
