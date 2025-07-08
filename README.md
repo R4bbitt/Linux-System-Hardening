@@ -106,6 +106,17 @@ Based on information of our members, some have improper read write priveleges on
 
 Using the same set of commands I continued to update permissions for moriarty.
 
+<img width="674" height="266" alt="Image" src="https://github.com/user-attachments/assets/dd22beb0-991f-4b01-adc7-4191e43c8a4d" />
+
+I continued this process for all other users.
+
+# Audit SSH
+
+Now I need to inspect the SSH settings enabling Port 22 so we can SSH into it if we need to. All I need to do for this is to uncomment that line in the config file.
+- Nano /etc/ssh/sshd_config 
+
+
+
 
 
 
