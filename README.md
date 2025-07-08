@@ -48,6 +48,8 @@ This removed lestrade’s home folder and subdirectories recursively.
 
 I then used the following bash on all other users as it was far quicker 
 - Deluser - -remove-home [user]
-  
 
+<img width="678" height="60" alt="Image" src="https://github.com/user-attachments/assets/977c82f0-6959-4857-9336-add15c519448" />
 
+Once lestrade and irene were removed I moved on to locking and unlocking users, first checking each account's status.
+- Passwd -S [user] 
