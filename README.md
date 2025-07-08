@@ -145,6 +145,15 @@ Our system appears to be using telnet and rsh-client. These programs are proven 
 
 -apt remove telnet
 
+<img width="669" height="207" alt="Image" src="https://github.com/user-attachments/assets/f0743118-aaf7-412e-baf6-4003ca5ae642" />
+
+I'll do the same for rsh-client, and then remove any unncessary dependencies left behind from other programs.
+- apt autoremove -y
+
+
+
+
+
 
 
 
