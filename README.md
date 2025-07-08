@@ -66,7 +66,9 @@ While unlocking Toby and Adler I discovered their accounts did not have assigned
 
 <img width="667" height="181" alt="Image" src="https://github.com/user-attachments/assets/c2946d28-27b6-460e-abae-2a401341c1e8" />
 
-
+I then unlocked the locked accounts and added users to their respective groups.
+- usermod -U [user] to unlock users
+- Groupadd research to add the research group 
 
 
 
