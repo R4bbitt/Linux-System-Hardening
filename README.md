@@ -201,6 +201,12 @@ Viewing the installed package list I noticed Samba was still on the system
 
 - Apt autoremove -y to clean up dependencies
 
+# Configure Logging
+
+Now I want to make sure the system is logging correctly. I need to set storage to persistent to save logs locally and update systemmaxuse to 300M setting the maximum disk space usage of log files.
+
+- Nano /etc/systemd/journald.conf
+
 
 
 
