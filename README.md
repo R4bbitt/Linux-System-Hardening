@@ -1,6 +1,6 @@
 
 # Linux-System-Hardening
-This project served as a learning experience where I implemented my knowledge of linux in hardening a system and its users and groups. I implemented and enforced a password policy and applied the principle of least privelege, minimizing potential risks from insider threats and/or bad actors.
+This project served as a learning experience where I implemented my knowledge of linux in hardening a system and its users and groups. I implemented and enforced a password policy and applied the principle of least privelege, minimizing potential risks from insider threats and/or bad actors. In the end I will automate the process by condensing everything I learned into two scripts. One script will gather system info, create a backup, remove and apply file and directory privileges respectively, and the other script will update and uprgrade current packages and ensure sudo priveleges are assigned correctly.
 
 ## Steps I took:
 
@@ -31,7 +31,6 @@ Using a few simple bash commands we can get a lot of useful information about th
 # Create a Backup
 
 Now that we know a bit more about our operating system it's always best practice to make a backup before making any big changes. I started with running ls -la in /, /home, and because there are only a few users I briefly inspected each user's folder to get a quick overview of what’s in each folder. By running the following command I created a tarball, or backup, excluding a list of unnecessary folders.
-
 - sudo tar -cvpzf /baker_street_backup.tar.gz --exclude=/baker_street_backup.tar.gz --exclude=/proc --exclude=/tmp --exclude=/mnt --exclude=/sys --exclude=/dev --exclude=/run
 - use ls to double check the backup was created
 
@@ -76,7 +75,7 @@ I then unlocked the locked accounts and added users to their respective groups.
 # Implement Password Policy
 
 I added the new prerequisites to user passwords, requiring a minimum length of 8 characters, at least 1 unique character, at least 1 uppercase letter, and only allowing 2 login attempts. I used nano to edit the passwords file.
-- nano /etc/pam.d/common-password
+- Nano /etc/pam.d/common-password
   
 <img width="694" height="224" alt="Image" src="https://github.com/user-attachments/assets/a33e6166-dbb5-4c60-bdf2-df8f8b7658c4" />
 
@@ -136,24 +135,22 @@ Added protocol 2 and then restart the shell server to apply the changes.
 # Review System Packages
 
 Now I need to view the package lists and check to see what needs to be updated.
-- apt update
+- Apt update
 - Touch package_list.txt to create a file that will have a list of all of our packages.
 - Apt list –installed > package_list.txt to print out a list of installed programs to our new file.
 - Chmod 640 [file] to remove world privileges from that new file.
 
 Our system appears to be using telnet and rsh-client. These programs are proven to be fairly insecure so for the integrity and security of this company we will remove them.
-
-- apt remove telnet
+- Apt remove telnet
 
 <img width="669" height="207" alt="Image" src="https://github.com/user-attachments/assets/f0743118-aaf7-412e-baf6-4003ca5ae642" />
 
 I'll do the same for rsh-client, and then remove any unncessary dependencies left behind from other programs.
-- apt autoremove -y
+- Apt autoremove -y
 
 <img width="663" height="103" alt="Image" src="https://github.com/user-attachments/assets/6987a8c0-154a-4fb0-a55b-589f5d93a022" />
 
 To replace the removed programs I'm going to install ufw, lynis, and tripwire.
-
 - Apt-get install [applications]
 
 <img width="659" height="195" alt="Image" src="https://github.com/user-attachments/assets/b2a66671-34e7-49cd-8db0-9c4b2a6ba70f" />
@@ -163,25 +160,17 @@ To replace the removed programs I'm going to install ufw, lynis, and tripwire.
 # Disbale Unnecessary Services
 
 Our steps in finding and removing unnecessary services is very similar to removing packages and programs. 
-
-- touch service_list.txt to create a file for our running services and removed world privileges.
-
+- Touch service_list.txt to create a file for our running services and removed world privileges.
 - Ps -e > [file] to list services and concatenate to our services list file.
  
 <img width="678" height="230" alt="Image" src="https://github.com/user-attachments/assets/352d6e18-0ca0-425b-9a26-d2d2e5df763b" />
 
 - Service smbd stop to stop the samba service
-
 - Service nmbd stop
-
 - Service [smdb/nmbd] disable
-
 - Apt remove samba
 
-
-
-
-Viewing the installed package list I noticed Samba was still on the system 
+Viewing the installed package list I noticed Samba was still on the system.
 
 <img width="697" height="196" alt="Image" src="https://github.com/user-attachments/assets/87eb3e1c-f924-4fcb-bdc7-0d0474853c3c" />
 
@@ -192,10 +181,7 @@ Viewing the installed package list I noticed Samba was still on the system
 <img width="700" height="206" alt="Image" src="https://github.com/user-attachments/assets/8e9cc644-f7aa-4d1c-b459-2f00706f25a4" />
 
 - Apt list –installed
-
-
-
-- apt remove --purge mysql-server mysql-client mysql-common mysql-server-core-* mysql-client-core-*
+- Apt remove --purge mysql-server mysql-client mysql-common mysql-server-core-* mysql-client-core-*
 
 <img width="694" height="164" alt="Image" src="https://github.com/user-attachments/assets/c0098153-5413-4b53-ad66-66266e2a3bc3" />
 
@@ -204,13 +190,11 @@ Viewing the installed package list I noticed Samba was still on the system
 # Configure Logging
 
 Now I want to make sure the system is logging correctly. I need to set storage to persistent to save logs locally and update systemmaxuse to 300M setting the maximum disk space usage of log files.
-
 - Nano /etc/systemd/journald.conf
 
 <img width="697" height="190" alt="Image" src="https://github.com/user-attachments/assets/1e24b29d-37eb-40ab-a0f5-d9a04dec3618" />
 
 I also changed the log rotate to daily, and then updated it so the system only keeps 1 week of backlogs.
-
 - Nano /etc/logrotate.conf 
 
 <img width="710" height="204" alt="Image" src="https://github.com/user-attachments/assets/bd567433-bc92-41a7-8075-e69389609ade" />
@@ -218,7 +202,6 @@ I also changed the log rotate to daily, and then updated it so the system only k
 # Create and Schedule Hardening Scripts
 
 In this step, I'll create two scripts that can automate the entire process above, creating a file with documenting the processes that took place. The first one will create a backup, edit users and groups and their file privieleges. I'll start by creating two empty script files.  
-
 - Touch hardening_script1.sh
 - Nano hardening_script1.sh
 
@@ -230,7 +213,6 @@ Using the example provided:
 - Find -iname ‘*engineering*’ -exec chown :engineering {} + and adding  -exec chmod 070 {} + <br>
 
 I was able to add to the script a bash that looks for any file with engineering in the name and changes the group ownership to the engineering group and allows only group read, write, execute privileges. 
-
 - ./hardening_script1.sh to run script
 
 I was given an error message the first time as some of the bashes I put in the script, for example the tar command, had sudo in it. By removing sudo from the bash the script ran perfectly. 
@@ -249,8 +231,12 @@ After running the first script, this is the file that is created:
 
 And now our second script will update programs and services while also removing dependencies.
 
+<img width="1053" height="477" alt="Image" src="https://github.com/user-attachments/assets/cb4ff1a1-f437-482b-aa08-bb915f26e0a4" />
 
+Lastly I'll have these scripts run on a schedule, further automating this process. The first script will be run the first day of the month, and the second script will run every monday ensuring our packages and programs are up to date.
+- Crontab -e
 
+<img width="838" height="261" alt="Image" src="https://github.com/user-attachments/assets/5d73798d-ee9d-454a-82eb-13f39d381e14" />
 
 
 
