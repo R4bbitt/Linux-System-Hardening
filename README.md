@@ -115,7 +115,9 @@ I continued this process for all other users.
 Now I need to inspect the SSH settings enabling Port 22 so we can SSH into it if we need to. All I need to do for this is to uncomment that line in the config file.
 - Nano /etc/ssh/sshd_config 
 
+<img width="685" height="143" alt="Image" src="https://github.com/user-attachments/assets/5e662879-45ae-49c2-b2b5-808d95397571" />
 
+Disabled root login
 
 
 
