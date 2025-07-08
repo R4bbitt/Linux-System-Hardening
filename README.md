@@ -64,8 +64,7 @@ To lock moriarty I used:
 While unlocking Toby and Adler I discovered their accounts did not have assigned passwords. As it would be a security risk to have unrestricted access into these accounts I assigned them a new password using: 
 - Passwd [user]
 
-
-
+<img width="667" height="181" alt="Image" src="https://github.com/user-attachments/assets/c2946d28-27b6-460e-abae-2a401341c1e8" />
 
 
 
