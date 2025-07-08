@@ -150,6 +150,11 @@ Our system appears to be using telnet and rsh-client. These programs are proven 
 I'll do the same for rsh-client, and then remove any unncessary dependencies left behind from other programs.
 - apt autoremove -y
 
+<img width="663" height="103" alt="Image" src="https://github.com/user-attachments/assets/6987a8c0-154a-4fb0-a55b-589f5d93a022" />
+
+To replace the removed programs I'm going to install ufw, lynis, and tripwire.
+
+Apt-get install (applications)
 
 
 
