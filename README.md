@@ -168,6 +168,8 @@ Our steps in finding and removing unnecessary services is very similar to removi
 
 - Ps -e > [file] to list services and concatenate to our services list file.
  
+<img width="678" height="230" alt="Image" src="https://github.com/user-attachments/assets/352d6e18-0ca0-425b-9a26-d2d2e5df763b" />
+
 - Service smbd stop to stop the samba service
 
 - Service nmbd stop
