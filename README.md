@@ -243,5 +243,17 @@ After running the first script, this is the file that is created:
 
 <img width="947" height="362" alt="Image" src="https://github.com/user-attachments/assets/ac43c32c-6a71-4402-ba33-c74c429c5610" />
 
+<img width="936" height="389" alt="Image" src="https://github.com/user-attachments/assets/4ffe61b6-613c-4384-b176-541f9463a6eb" />
+
+<img width="924" height="413" alt="Image" src="https://github.com/user-attachments/assets/fae0b07e-4015-45b0-a31d-57d5515160f9" />
+
+And now our second script will update programs and services while also removing dependencies.
+
+
+
+
+
+
+
 
 
