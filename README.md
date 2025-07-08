@@ -119,7 +119,9 @@ Now I need to inspect the SSH settings enabling Port 22 so we can SSH into it if
 
 Disabled root login
 
+<img width="675" height="87" alt="Image" src="https://github.com/user-attachments/assets/88cae5ed-c5c7-4c2b-8189-eec433f56068" />
 
+Require a password for ssh connection
 
 
 
