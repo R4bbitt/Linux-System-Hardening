@@ -1,3 +1,4 @@
+
 # Linux-System-Hardening
 This project served as a learning experience where I implemented my knowledge of linux in hardening a system and its users and groups. I implemented and enforced a password policy and applied the principle of least privelege, minimizing potential risks from insider threats and/or bad actors.
 
@@ -129,3 +130,21 @@ Added protocol 2 and then restart the shell server to apply the changes.
 - Service ssh restart
 
 <img width="669" height="136" alt="Image" src="https://github.com/user-attachments/assets/a9e2f294-6aff-4c35-ac25-04c5eebe23bd" />
+
+<img width="671" height="63" alt="Image" src="https://github.com/user-attachments/assets/b9791e42-1d13-4519-a974-9be6c413ca20" />
+
+# Review System Packages
+
+Now I need to view the package lists and check to see what needs to be updated.
+- apt update
+- Touch package_list.txt to create a file that will have a list of all of our packages.
+- Apt list –installed > package_list.txt to print out a list of installed programs to our new file.
+- Chmod 640 [file] to remove world privileges from that new file.
+
+Our system appears to be using telnet and rsh-client. These programs are proven to be fairly insecure so for the integrity and security of this company we will remove them.
+
+-apt remove telnet
+
+
+
+
