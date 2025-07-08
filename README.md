@@ -34,6 +34,7 @@ Now that we know a bit more about our operating system it's always best practice
 - sudo tar -cvpzf /baker_street_backup.tar.gz --exclude=/baker_street_backup.tar.gz --exclude=/proc --exclude=/tmp --exclude=/mnt --exclude=/sys --exclude=/dev --exclude=/run
 - use ls to double check the backup was created
 
+![[Screen 20Shot-,2025,-%2D02%2D24%20at](
 # Audit Users and Groups
 
 
