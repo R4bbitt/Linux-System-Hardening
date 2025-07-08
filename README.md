@@ -66,12 +66,15 @@ While unlocking Toby and Adler I discovered their accounts did not have assigned
 
 <img width="667" height="181" alt="Image" src="https://github.com/user-attachments/assets/c2946d28-27b6-460e-abae-2a401341c1e8" />
 
-I then unlocked the locked accounts and added users to their respective groups.
+I then unlocked the locked accounts and added users to their respective groups. 
 - usermod -U [user] to unlock users
 - Groupadd research to add the research group 
 
 <img width="732" height="127" alt="Image" src="https://github.com/user-attachments/assets/1a7e01f7-08de-4413-9bcc-3149e935b1c7" />
 
+# Implement Password Policy
 
+I added the new prerequisites to user passwords, requiring a minimum length of 8 characters, at least 1 unique character, at least 1 uppercase letter, and only allowing 2 login attempts. I used nano to edit the passwords file.
 
+- nano /etc/pam.d/common-password
 
