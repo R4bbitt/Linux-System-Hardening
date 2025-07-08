@@ -52,4 +52,23 @@ I then used the following bash on all other users as it was far quicker
 <img width="678" height="60" alt="Image" src="https://github.com/user-attachments/assets/977c82f0-6959-4857-9336-add15c519448" />
 
 Once lestrade and irene were removed I moved on to locking and unlocking users, first checking each account's status.
-- Passwd -S [user] 
+- Passwd -S [user]
+
+<img width="692" height="104" alt="Image" src="https://github.com/user-attachments/assets/68a2edbd-4e58-4879-ada4-aad8b4d083cc" />
+
+To lock moriarty I used: 
+- Usermod -L moriarty 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
