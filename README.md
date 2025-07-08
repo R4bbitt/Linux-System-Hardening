@@ -183,11 +183,21 @@ Our steps in finding and removing unnecessary services is very similar to removi
 
 Viewing the installed package list I noticed Samba was still on the system 
 
+<img width="697" height="196" alt="Image" src="https://github.com/user-attachments/assets/87eb3e1c-f924-4fcb-bdc7-0d0474853c3c" />
+
+<img width="699" height="223" alt="Image" src="https://github.com/user-attachments/assets/4eda45e9-fd3d-4f3f-95d7-32b549526fc0" />
+
 - Apt remove –purge samba samba-libs
+
+<img width="700" height="206" alt="Image" src="https://github.com/user-attachments/assets/8e9cc644-f7aa-4d1c-b459-2f00706f25a4" />
 
 - Apt list –installed
 
+
+
 - apt remove --purge mysql-server mysql-client mysql-common mysql-server-core-* mysql-client-core-*
+
+<img width="694" height="164" alt="Image" src="https://github.com/user-attachments/assets/c0098153-5413-4b53-ad66-66266e2a3bc3" />
 
 - Apt autoremove -y to clean up dependencies
 
