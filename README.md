@@ -128,5 +128,4 @@ Require a password for ssh connection
 Added protocol 2 and then restart the shell server to apply the changes.
 - Service ssh restart
 
-
-
+<img width="669" height="136" alt="Image" src="https://github.com/user-attachments/assets/a9e2f294-6aff-4c35-ac25-04c5eebe23bd" />
