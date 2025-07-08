@@ -88,6 +88,16 @@ I removed illegitimate users and edited watson’s and mycroft’s abilities, gi
 
 Additionally, users now have to enter their password for sudo commands adding another layer of security for running sudo.
 
+<img width="674" height="189" alt="Image" src="https://github.com/user-attachments/assets/98febafc-e8d5-4639-8835-c207a2d2cfaa" />
+
+# Update Permissions on Files and Directories
+
+Next I need to update the ownership of two scripts, assigning them to the engineering group.
+- Chgrp engineering [.sh file]
+
+
+
+
 
 
 
