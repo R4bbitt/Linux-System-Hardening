@@ -241,7 +241,7 @@ I was given an error message the first time as some of the bashes I put in the s
 
 After running the first script, this is the file that is created:
 
-
+<img width="947" height="362" alt="Image" src="https://github.com/user-attachments/assets/ac43c32c-6a71-4402-ba33-c74c429c5610" />
 
 
 
