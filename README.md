@@ -59,7 +59,10 @@ Once lestrade and irene were removed I moved on to locking and unlocking users, 
 To lock moriarty I used: 
 - Usermod -L moriarty 
 
+<img width="693" height="82" alt="Image" src="https://github.com/user-attachments/assets/9dbcf0e7-02eb-4aab-8818-bc7ed0103fc0" />
 
+While unlocking Toby and Adler I discovered their accounts did not have assigned passwords. As it would be a security risk to have unrestricted access into these accounts I assigned them a new password using: 
+- Passwd [user]
 
 
 
