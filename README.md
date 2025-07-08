@@ -84,7 +84,7 @@ I added the new prerequisites to user passwords, requiring a minimum length of 8
 I removed illegitimate users and edited watson’s and mycroft’s abilities, giving them access to run sudo only when running the logcleanup script and the research script for only those in the research group.
 - Sudo visudo
 
-<img width="714" height="204" alt="Image" src="https://github.com/user-attachments/assets/ea579763-c24b-4bb3-aa3f-4164d7f75a9c" />
+<img width="694" height="209" alt="Image" src="https://github.com/user-attachments/assets/3ed50b34-04f1-4192-8359-facb8a3dd4d1" />
 
 Additionally, users now have to enter their password for sudo commands adding another layer of security for running sudo.
 
