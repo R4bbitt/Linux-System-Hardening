@@ -95,9 +95,12 @@ Additionally, users now have to enter their password for sudo commands adding an
 Next I need to update the ownership of two scripts, assigning them to the engineering group.
 - Chgrp engineering [.sh file]
 
+<img width="690" height="71" alt="Image" src="https://github.com/user-attachments/assets/50ac3100-43d3-43d8-9571-3b24b91d78bd" />
 
 
-
+Based on information of our members, some have improper read write priveleges on files and scripts. We want to make sure only members of a certain group have access to their respective files. In hindsight this was a process I could have streamlined for more effciency. 
+- Chmod 070 [.sh file] to update rwx permissions
+- Chmod 640 [file] to remove world privileges but keeping the original read and write privileges on all other files.
 
 
 
