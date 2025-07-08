@@ -123,5 +123,10 @@ Disabled root login
 
 Require a password for ssh connection
 
+<img width="679" height="62" alt="Image" src="https://github.com/user-attachments/assets/85cdc826-6c80-4b68-9d53-e8a114a22ff6" />
+
+Added protocol 2 and then restart the shell server to apply the changes.
+- Service ssh restart
+
 
 
