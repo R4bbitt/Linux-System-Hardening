@@ -70,8 +70,7 @@ I then unlocked the locked accounts and added users to their respective groups.
 - usermod -U [user] to unlock users
 - Groupadd research to add the research group 
 
-
-
+<img width="732" height="127" alt="Image" src="https://github.com/user-attachments/assets/1a7e01f7-08de-4413-9bcc-3149e935b1c7" />
 
 
 
