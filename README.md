@@ -42,7 +42,12 @@ Next I removed users that are no longer employed along with their corresponding 
 - Sudo deluser - -remove-all-files lestrade <br>
 I ran into issues as the command removed the users id and the –remove-home wouldn’t work, so I used:
 - Sudo rm -r lestrade <br>
-This removed lestrade’s home folder and subdirectories recursively. 
+This removed lestrade’s home folder and subdirectories recursively.
 
+<img width="687" height="77" alt="Image" src="https://github.com/user-attachments/assets/8cf139f5-aa70-4367-bbb4-db5d4188360a" />
+
+I then used the following bash on all other users as it was far quicker 
+- Deluser - -remove-home [user]
+  
 
 
