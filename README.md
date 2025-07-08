@@ -207,6 +207,36 @@ Now I want to make sure the system is logging correctly. I need to set storage t
 
 - Nano /etc/systemd/journald.conf
 
+<img width="697" height="190" alt="Image" src="https://github.com/user-attachments/assets/1e24b29d-37eb-40ab-a0f5-d9a04dec3618" />
+
+I also changed the log rotate to daily, and then updated it so the system only keeps 1 week of backlogs.
+
+- Nano /etc/logrotate.conf 
+
+<img width="710" height="204" alt="Image" src="https://github.com/user-attachments/assets/bd567433-bc92-41a7-8075-e69389609ade" />
+
+# Create and Schedule Hardening Scripts
+
+In this step, I'll create two scripts that can automate the entire process above. The first one will edit users and groups and their file privieleges. I'll start by creating two empty script files.  
+
+- Touch hardening_script1.sh
+- Nano hardening_script1.sh
+
+In creating the scripts I needed a single bash that would remove all world privileges from all files rather than manually changing file by file; using: 
+- chmod -R o-rwx /home/*
+
+This method is far quicker and is what I should have ran from the very beginning.
+Using the example provided:
+- Find -iname ‘*engineering*’ -exec chown :engineering {} + and adding  -exec chmod 070 {} + <br>
+
+I was able to add to the script a bash that looks for any file with engineering in the name and changes the group ownership to the engineering group and allows only group read, write, execute privileges. 
+
+- ./hardening_script1.sh to run script
+
+I was given an error message the first time as some of the bashes I put in the script, for example the tar command, had sudo in it. By removing sudo from the bash the script ran perfectly. 
+
+
+
 
 
 
