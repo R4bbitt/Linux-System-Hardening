@@ -102,5 +102,11 @@ Based on information of our members, some have improper read write priveleges on
 - Chmod 070 [.sh file] to update rwx permissions
 - Chmod 640 [file] to remove world privileges but keeping the original read and write privileges on all other files.
 
+<img width="682" height="312" alt="Image" src="https://github.com/user-attachments/assets/b354da48-3789-46ea-90e7-15ebbc42175c" />
+
+Using the same set of commands I continued to update permissions for moriarty.
+
+
+
 
 
