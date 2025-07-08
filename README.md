@@ -75,6 +75,12 @@ I then unlocked the locked accounts and added users to their respective groups.
 # Implement Password Policy
 
 I added the new prerequisites to user passwords, requiring a minimum length of 8 characters, at least 1 unique character, at least 1 uppercase letter, and only allowing 2 login attempts. I used nano to edit the passwords file.
-
 - nano /etc/pam.d/common-password
+  
+<img width="694" height="224" alt="Image" src="https://github.com/user-attachments/assets/a33e6166-dbb5-4c60-bdf2-df8f8b7658c4" />
+
+# Update Sudo Permissions
+
+I removed illegitimate users and edited watson’s and mycroft’s abilities, giving them access to run sudo only when running the logcleanup script and the research script for only those in the research group.
+- Sudo visudo
 
