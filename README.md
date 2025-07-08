@@ -158,7 +158,6 @@ To replace the removed programs I'm going to install ufw, lynis, and tripwire.
 
 <img width="659" height="195" alt="Image" src="https://github.com/user-attachments/assets/b2a66671-34e7-49cd-8db0-9c4b2a6ba70f" />
 <img width="662" height="150" alt="Image" src="https://github.com/user-attachments/assets/e2f9bb29-7431-4343-b7c9-7881dec51c08" />
-
-
+<img width="673" height="220" alt="Image" src="https://github.com/user-attachments/assets/b3e2ecc8-133e-45e8-a773-f7d83c30079d" />
 
 
