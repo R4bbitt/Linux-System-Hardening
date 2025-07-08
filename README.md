@@ -143,7 +143,7 @@ Now I need to view the package lists and check to see what needs to be updated.
 
 Our system appears to be using telnet and rsh-client. These programs are proven to be fairly insecure so for the integrity and security of this company we will remove them.
 
--apt remove telnet
+- apt remove telnet
 
 <img width="669" height="207" alt="Image" src="https://github.com/user-attachments/assets/f0743118-aaf7-412e-baf6-4003ca5ae642" />
 
@@ -159,5 +159,38 @@ To replace the removed programs I'm going to install ufw, lynis, and tripwire.
 <img width="659" height="195" alt="Image" src="https://github.com/user-attachments/assets/b2a66671-34e7-49cd-8db0-9c4b2a6ba70f" />
 <img width="662" height="150" alt="Image" src="https://github.com/user-attachments/assets/e2f9bb29-7431-4343-b7c9-7881dec51c08" />
 <img width="673" height="220" alt="Image" src="https://github.com/user-attachments/assets/b3e2ecc8-133e-45e8-a773-f7d83c30079d" />
+
+# Disbale Unnecessary Services
+
+Our steps in finding and removing unnecessary services is very similar to removing packages and programs. 
+
+- touch service_list.txt to create a file for our running services and removed world privileges.
+
+- Ps -e > [file] to list services and concatenate to our services list file.
+ 
+- Service smbd stop to stop the samba service
+
+- Service nmbd stop
+
+- Service [smdb/nmbd] disable
+
+- Apt remove samba
+
+
+
+
+Viewing the installed package list I noticed Samba was still on the system 
+
+- Apt remove –purge samba samba-libs
+
+- Apt list –installed
+
+- apt remove --purge mysql-server mysql-client mysql-common mysql-server-core-* mysql-client-core-*
+
+- Apt autoremove -y to clean up dependencies
+
+
+
+
 
 
