@@ -29,7 +29,7 @@ Using a few simple bash commands we can get a lot of useful information about th
 
 # Create a Backup
 
-Now that we know a bit more about our operating system it's always best practice to make a backup before making any big changes. I started with running ls -la in /, /home, and because there are are only a few users I briefly inspected each user's folder to get a quick overview of what’s in each folder. By running the following command I created a tarball, or backup, excluding a list of unnecessary folders.
+Now that we know a bit more about our operating system it's always best practice to make a backup before making any big changes. I started with running ls -la in /, /home, and because there are only a few users I briefly inspected each user's folder to get a quick overview of what’s in each folder. By running the following command I created a tarball, or backup, excluding a list of unnecessary folders.
 
 - sudo tar -cvpzf /baker_street_backup.tar.gz --exclude=/baker_street_backup.tar.gz --exclude=/proc --exclude=/tmp --exclude=/mnt --exclude=/sys --exclude=/dev --exclude=/run
 - use ls to double check the backup was created
@@ -38,7 +38,11 @@ Now that we know a bit more about our operating system it's always best practice
 
 # Audit Users and Groups
 
-
+Next I removed users that are no longer employed along with their corresponding files.
+- Sudo deluser - -remove-all-files lestrade <br>
+I ran into issues as the command removed the users id and the –remove-home wouldn’t work, so I used:
+- Sudo rm -r lestrade <br>
+This removed lestrade’s home folder and subdirectories recursively. 
 
 
 
