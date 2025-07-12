@@ -10,7 +10,7 @@ This project served as a learning experience where I implemented my knowledge of
 * [Implement Password Policy](#implement-password-policy)
 * [Update Sudo Permissions](#update-sudo-permissions)
 * [Update Permissions on Files and Directories](#update-permissions-on-files-and-directories)
-* [Audit SSH](audit-ssh)
+* [Audit SSH](#audit-ssh)
 * [Review System Packages](#review-system-packages)
 * [Disbale Unnecessary Services](#disable-unnecessary-services)
 * [Configure Logging](#configure-logging)
