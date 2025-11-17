@@ -1,6 +1,6 @@
 
 # Linux-System-Hardening
-This project served as a learning experience where I implemented my knowledge of linux in hardening a system and its users and groups. I implemented and enforced a password policy and applied the principle of least privelege, minimizing potential risks from insider threats and/or bad actors. In the end I will automate the process by condensing everything I learned into two scripts. One script will gather system info, create a backup, remove and apply file and directory privileges respectively, and the other script will update and uprgrade current packages and ensure sudo priveleges are assigned correctly.
+This project served as a learning experience where I increased the security of a Linux system. I implemented and enforced a password policy and applied the principle of least privelege, minimizing potential risks from insider threats and bad actors. In the end I automate the process by condensing everything I learned into two scripts. One script to gather system info, create a backup, remove and apply file and directory privileges respectively, and the other script to update and uprgrade current packages and ensure sudo priveleges are assigned correctly and only where necessary.
 
 ## Steps I took:
 
